@@ -1,12 +1,12 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-      </Head>
-      <main>
-      </main>
-    </>
-  )
+    return (
+        <>
+            <Head>
+                <span />
+            </Head>
+            <main />
+        </>
+    );
 }
