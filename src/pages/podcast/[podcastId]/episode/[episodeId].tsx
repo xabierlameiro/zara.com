@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const Home = () => {
+const EpisodeDetail = () => {
     return (
         <>
             <Head>
@@ -11,4 +11,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default EpisodeDetail;
