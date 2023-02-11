@@ -1,20 +1,9 @@
 import styles from './Card.module.css';
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Podcast } from '@/types/podcast';
 
-type CardProps = {
-    url: string;
-    img: {
-        width: number;
-        height: number;
-        src: string;
-        alt: string;
-    };
-    title: string;
-    author: string;
-};
-
-const Card = ({ img, url, title, author }: CardProps) => {
+const Card = ({ img, url, title, author }: Podcast) => {
     return (
         <Link href={url} data-testid="card" className={styles.card}>
             <Image

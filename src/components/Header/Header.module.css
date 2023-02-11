@@ -23,6 +23,7 @@
     box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
     animation: pulse 2s infinite;
     background: rgba(83, 124, 180);
+    margin-right: 20px;
 }
 
 @keyframes pulse {

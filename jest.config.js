@@ -23,6 +23,7 @@ const customJestConfig = {
     moduleNameMapper: {
         '^@/test$': '<rootDir>/jest.setup.js',
         '^@/components(.*)$': '<rootDir>src/components/$1',
+        '^@/types(.*)$': '<rootDir>src/types/$1',
     },
     testEnvironment: 'jest-environment-jsdom',
 };
