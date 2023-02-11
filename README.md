@@ -29,3 +29,4 @@
 6. yarn add -D eslint-config-prettier && touch .prettierrc.json
 7. yarn add -D jest jest-environment-jsdom @testing-library/react @testing-library/jest-dom
 8. touch jest.config.js && touch jest.setup.js && touch jest.mock.js
+9. yarn add swr
