@@ -1,0 +1,37 @@
+.header_nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 0 20px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.header_nav_link {
+    text-decoration: none;
+    color: rgba(83, 124, 180);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.header_nav_mark {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0.4);
+    animation: pulse 2s infinite;
+    background: rgba(83, 124, 180);
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 24px rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}

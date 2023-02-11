@@ -27,8 +27,8 @@ Main requirements:
 
 Header requirements:
 ====================
-- [ ] The title is a link to the home page.
-- [ ] Each time a navigation is made, a mark will be displayed in the top right-hand corner.
+- [x] The title is a link to the home page.
+- [x] Each time a navigation is made, a mark will be displayed in the top right-hand corner.
 
 ![Header screenshot](/public/Header.png)
 

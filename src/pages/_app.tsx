@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import '../styles/global.css';
 import { SWRConfig } from 'swr';
 
 export const localStorageProvider = () => {

@@ -16,7 +16,8 @@
         "incremental": true,
         "baseUrl": ".",
         "paths": {
-            "@/test": ["./jest.setup.js"]
+            "@/test": ["./jest.setup.js"],
+            "@/components/*": ["./src/components/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
