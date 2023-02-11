@@ -12,15 +12,15 @@ Resources:
 
 Restrictions:
 =============
-- [ ] Clean urls, without using #
-- [ ] The use of any JS/CSS library is allowed except AngularJS and Ember
+- [x] Clean urls, without using #
+- [x] The use of any JS/CSS library is allowed except AngularJS and Ember
 
 Main requirements:
 =============
 - [ ] 3 views: HomePage, Podcast detail, Details of a podcast episode
 - [ ] The design of the views must be respected 
-- [ ] The application must be a single page application.
-- [ ] It has to be in development and production mode
+- [x] The application must be a single page application.
+- [x] It has to be in development and production mode
 - [x] Final code on GitHub
 - [x] Gradually upload the code differentiating achievements with tags.
 - [x] You must have a README document explaining the commands.
