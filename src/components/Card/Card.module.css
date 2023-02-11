@@ -1,0 +1,44 @@
+.card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px auto auto;
+    gap: 10px;
+    align-items: center;
+    justify-items: center;
+    padding: 20px;
+    max-width: 300px;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    background-color: #fff;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .card_img {
+    transform: translate(0, -30%) scale(1.1);
+}
+
+.card_img {
+    border-radius: 50%;
+    transform: translate(0, -30%) scale(1);
+    transition: all 0.5s ease;
+}
+
+.card_title {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.card_author {
+    font-size: 14px;
+    font-weight: 400;
+    color: grey;
+}
