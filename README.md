@@ -1,23 +1,33 @@
-# Installation
+# Requirements
 
-1. yarn install / yarn i / yarn / npm install / npm i
+[Link](TODO.md)
 
-# Run in development mode
+# Install dependencies
 
-1. yarn dev / npm run dev
+yarn install
 
-# Run in production mode
+# How to use production build
 
-1. yarn build / npm run build
-2. yarn start / npm run start
+1. yarn dev - To turn on the api (necessary for the production build port 3000)
+2. yarn build - To generate the production build
+3. yarn start - To run the production build (this will run on port 4000)
+
+# Endpoint routes
+## GET Podcasts
+http://localhost:3000/api/podcasts
+
+## GET Episodes
+http://localhost:3000/api/episodes/1535809341
 
 # Run tests
 
-1. yarn test / npm run test
+yarn test 
+
+yarn test --coverage (to see coverage)
 
 # Run tests in watch mode
 
-1. yarn test:watch / npm run test:watch
+yarn test:watch
 
 # Command sequence to create this project:
 
