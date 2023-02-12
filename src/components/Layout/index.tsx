@@ -5,7 +5,7 @@ const Layout = ({ children, isLoading }: { children: React.ReactNode; isLoading?
     return (
         <>
             <Header isLoading={isLoading} />
-            <main>{children}</main>
+            <main data-testid="main-content">{children}</main>
         </>
     );
 };

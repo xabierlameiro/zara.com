@@ -18,7 +18,7 @@ Restrictions:
 Main requirements:
 =============
 - [x] 3 views: HomePage, Podcast detail, Details of a podcast episode
-- [ ] The design of the views must be respected 
+- [x] The design of the views must be respected 
 - [x] The application must be a single page application.
 - [x] It has to be in development and production mode
 - [x] Final code on GitHub
@@ -47,7 +47,7 @@ Podcast detail requirements:
 ============================
 - [x] Route /podcast/:podcastId
 - [x] The view have a sidebar should be displayed with the image of the podcast,title, author and description.
-- [ ] The view have a main section with nº of episodes and a list of episodes with title, date and duration.
+- [x] The view have a main section with nº of episodes and a list of episodes with title, date and duration.
 - [x] Once the list is obtained it is cached for 1 day like the home page.
 - [x] When the user clicks on an episode he/she will go to the episode detail page.
 

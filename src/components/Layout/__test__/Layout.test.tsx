@@ -1,12 +1,15 @@
-import { render, screen } from "@/test";
+import { render, screen } from '@/test';
 
-import Layout from "..";
+import Layout from '..';
 
-describe("Layout", () => {
-    it.skip("should render layout with a header and, sidebar and main content", () => {
-        render(<Layout />);
-        expect(screen.getByTestId("header")).toBeInTheDocument();
-        expect(screen.getByTestId("sidebar")).toBeInTheDocument();
-        expect(screen.getByTestId("main-content")).toBeInTheDocument();
+describe('Layout', () => {
+    it('should render layout with a header and, sidebar and main content', () => {
+        render(
+            <Layout>
+                <div />
+            </Layout>
+        );
+        expect(screen.getByTestId('podcast-header')).toBeInTheDocument();
+        expect(screen.getByTestId('main-content')).toBeInTheDocument();
     });
 });

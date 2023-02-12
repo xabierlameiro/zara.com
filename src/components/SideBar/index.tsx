@@ -48,4 +48,22 @@ const Sidebar = (props: SideBarProps) => {
     );
 };
 
+/**
+ *
+ * @description - Container for the sidebar
+ * @param {JSX.Element} children - The children of the container
+ * @param {SideBarProps} sideBarProps - The props of the sidebar
+ * @returns {JSX.Element} - The JSX element
+ */
+const Container = ({ children, sideBarProps }: { children: JSX.Element; sideBarProps: SideBarProps }) => {
+    return (
+        <div className={styles.container}>
+            <Sidebar {...sideBarProps} />
+            <div className={styles.container_content}>{children}</div>
+        </div>
+    );
+};
+
+Sidebar.Container = Container;
+
 export default Sidebar;
