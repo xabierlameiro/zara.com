@@ -1,0 +1,62 @@
+.link {
+    text-decoration: none;
+}
+
+.sidebar {
+    width: 250px;
+    height: fit-content;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    display: grid;
+    padding: 20px;
+    justify-items: center;
+    grid-template-rows: 200px auto auto;
+}
+
+.sidebar_img {
+    width: 200px;
+    height: 200px;
+    padding-bottom: 20px;
+}
+
+.sidebar_title {
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px 0;
+    margin: 30px 0;
+}
+
+.sidebar_podcast {
+    color: #000;
+    font-weight: 800;
+    font-size: 14px;
+    display: inline-block;
+}
+
+.sidebar_author {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    font-style: italic;
+}
+
+.sidebar_description {
+    font-size: 14px;
+    color: #000;
+}
+
+.sidebar_description_container_title {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    color: #000;
+    padding-bottom: 10px;
+}
+.sidebar_description_container_text {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000;
+    font-style: italic;
+}
