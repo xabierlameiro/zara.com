@@ -1,11 +1,13 @@
 .audio_card {
     width: 100%;
     padding: 20px 30px 40px 30px;
+    box-sizing: border-box;
     border-radius: 5px;
     height: fit-content;
     background-color: #fff;
     box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
 }
+
 .audio_card_title {
     font-size: 1.5rem;
     font-weight: 600;
@@ -41,6 +43,7 @@ audio.audio_card_player::-webkit-media-controls-panel {
     background-color: rgba(66, 66, 66);
     border: 0;
 }
+
 audio.audio_card_player::-webkit-media-controls-current-time-display,
 audio.audio_card_player::-webkit-media-controls-time-remaining-display {
     color: white;

@@ -26,7 +26,11 @@ export type SideBarProps = {
 };
 
 export type Episode = {
+    id: string;
+    podcastId: string;
     track: string;
     name: string;
     description: string;
+    duration: string;
+    date: string;
 };
