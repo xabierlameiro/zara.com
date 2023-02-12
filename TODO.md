@@ -46,10 +46,10 @@ Home Page requirements:
 Podcast detail requirements:
 ============================
 - [x] Route /podcast/:podcastId
-- [ ] The view have a sidebar should be displayed with the image of the podcast,title, author and description.
+- [x] The view have a sidebar should be displayed with the image of the podcast,title, author and description.
 - [ ] The view have a main section with nº of episodes and a list of episodes with title, date and duration.
 - [x] Once the list is obtained it is cached for 1 day like the home page.
-- [ ] When the user clicks on an episode he/she will go to the episode detail page.
+- [x] When the user clicks on an episode he/she will go to the episode detail page.
 
 ![Podcast detail page screenshot](/public/Podcast-detail.png)
 
@@ -57,8 +57,8 @@ Podcast detail requirements:
 Episode detail requirements:
 ============================
 - [x] Route /podcast/:podcastId/episode/:episodeId
-- [ ] The view have same sidebar as the podcast detail page.
-- [ ] The view have a main section with the title of episode, date, description and audio player.
-- [ ] Episode descriptions contain HTML and this must be rendered (not escaped).
+- [x] The view have same sidebar as the podcast detail page.
+- [x] The view have a main section with the title of episode, date, description and audio player.
+- [x] Episode descriptions contain HTML and this must be rendered (not escaped).
 
 ![Episode detail page screenshot](/public/Episode-detail.png)
