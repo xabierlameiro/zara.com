@@ -8,4 +8,10 @@ describe('Filter', () => {
         expect(screen.getByPlaceholderText('Filter podcast...')).toBeInTheDocument();
         expect(screen.getByTestId('filter-counter')).toBeInTheDocument();
     });
+
+    it('should render without collection', () => {
+        // @ts-ignore
+        render(<Filter collection={undefined} />);
+        expect(screen.queryByTestId('filter-counter')).not.toBeInTheDocument();
+    });
 });

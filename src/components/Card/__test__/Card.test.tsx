@@ -3,6 +3,7 @@ import { render, screen, fireEvent } from '@/test';
 import Card from '..';
 
 const props = {
+    key: '123',
     url: '/podcast/123',
     img: {
         width: 100,

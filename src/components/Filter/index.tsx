@@ -18,13 +18,15 @@ const Filter = ({ collection, placeHolder = 'Filter podcast...' }: FilterProps) 
     };
 
     React.useEffect(() => {
-        const results = collection?.filter((item: Podcast) => {
-            return (
-                item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                item.author.toLowerCase().includes(searchTerm.toLowerCase())
-            );
-        });
-        setFilteredCollection(results);
+        if (collection) {
+            const results = collection.filter((item: Podcast) => {
+                return (
+                    item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    item.author.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+            });
+            setFilteredCollection(results);
+        }
     }, [searchTerm, collection]);
 
     if (!collection) return null;
