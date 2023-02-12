@@ -37,9 +37,9 @@ Home Page requirements:
 - [x] Route /
 - [x] List of the 100 most popular podcasts as listed by Apple.
 - [x] Once the list is obtained it is cached for 1 day.
-- [ ] The user can filter by text, the list by title of the podcast and author name.
-- [ ] The filtering should be immediate so that when the user presses any key.
-- [ ] When the user clicks on a podcast he/she will go to the podcast detail page.
+- [x] The user can filter by text, the list by title of the podcast and author name.
+- [x] The filtering should be immediate so that when the user presses any key.
+- [x] When the user clicks on a podcast he/she will go to the podcast detail page.
 
 ![Home page screenshot](/public/Home-page.png)
 
