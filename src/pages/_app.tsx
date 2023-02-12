@@ -1,6 +1,8 @@
+import React from 'react';
+import { SWRConfig } from 'swr';
+import Layout from '@/components/Layout';
 import type { AppProps } from 'next/app';
 import '../styles/global.css';
-import { SWRConfig } from 'swr';
 
 export const localStorageProvider = () => {
     // if the window hasn't loaded yet (SSR workaround)
@@ -17,10 +19,21 @@ export const localStorageProvider = () => {
 };
 
 export default function App({ Component, pageProps }: AppProps) {
+    const [loading, setLoading] = React.useState(false);
+
     return (
         <SWRConfig
             value={{
-                fetcher: (url: string) => fetch(url).then((response) => response.json()),
+                fetcher: async (url: string) => {
+                    const cache = localStorageProvider();
+                    const cachedData = cache.get(url);
+                    if (!cachedData || !cachedData.data) {
+                        setLoading(true);
+                    }
+                    return await fetch(url)
+                        .then((res) => res.json())
+                        .finally(() => setLoading(false));
+                },
                 provider: () => localStorageProvider(),
                 revalidateOnFocus: false,
                 revalidateOnReconnect: false,
@@ -29,7 +42,9 @@ export default function App({ Component, pageProps }: AppProps) {
                 refreshWhenHidden: false,
             }}
         >
-            <Component {...pageProps} />
+            <Layout isLoading={loading}>
+                <Component {...pageProps} />
+            </Layout>
         </SWRConfig>
     );
 }

@@ -46,9 +46,15 @@ const Filter = ({ collection, placeHolder = 'Filter podcast...' }: FilterProps) 
                 />
             </div>
             <section className={styles.podcast_list}>
-                {filteredCollection.map((item: Podcast) => {
+                {filteredCollection.map((item: Podcast, index: number) => {
                     return (
-                        <Card key={item.key} url={item.url} img={item.img} title={item.title} author={item.author} />
+                        <Card
+                            key={item.url + index}
+                            url={item.url}
+                            img={item.img}
+                            title={item.title}
+                            author={item.author}
+                        />
                     );
                 })}
             </section>

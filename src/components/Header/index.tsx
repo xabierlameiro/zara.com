@@ -5,7 +5,7 @@ type HeaderProps = {
     isLoading?: boolean;
 };
 
-const Header = ({ isLoading = true }: HeaderProps) => {
+const Header = ({ isLoading = false }: HeaderProps) => {
     return (
         <header data-testid="podcast-header">
             <nav className={styles.header_nav}>

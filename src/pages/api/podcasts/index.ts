@@ -14,7 +14,6 @@ export default async function handler(
         }
 
         const podcasts = response.feed.entry.map((podcast: any) => ({
-            key: podcast.id.attributes['im:id'],
             url: `/podcast/${podcast.id.attributes['im:id']}`,
             img: {
                 width: podcast['im:image'][2].attributes.height,

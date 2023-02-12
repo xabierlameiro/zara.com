@@ -1,5 +1,4 @@
 export type Podcast = {
-    key: string;
     url: string;
     img: {
         width: number;
