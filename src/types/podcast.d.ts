@@ -24,3 +24,9 @@ export type SideBarProps = {
     author: string;
     description: string;
 };
+
+export type Episode = {
+    track: string;
+    name: string;
+    description: string;
+};
