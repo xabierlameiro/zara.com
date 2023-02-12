@@ -28,8 +28,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
                     track: episode.previewUrl,
                     id: episode.trackId,
                 }));
+                // TODO :review this part
                 return {
-                    detail,
+                    detail: {
+                        url: `/podcast/${detail.collectionId}`,
+                        img: {
+                            width: 400,
+                            height: 400,
+                            src: detail.artworkUrl600,
+                            alt: detail.collectionName,
+                        },
+                        title: detail.collectionName,
+                        author: detail.artistName,
+                        description: detail.description,
+                    },
                     episodes,
                 };
             });
