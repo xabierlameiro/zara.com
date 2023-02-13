@@ -20,6 +20,8 @@ export async function getStaticProps() {
             props: {
                 podcasts: Object.values(res),
             },
+            // Re-generate the home page 24 hours after the last request
+            revalidate: 60 * 60 * 24,
         };
     } catch (error) {
         return {

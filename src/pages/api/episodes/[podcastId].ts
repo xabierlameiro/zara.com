@@ -28,7 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
                     track: episode.previewUrl,
                     id: episode.trackId,
                 }));
-                // TODO :review this part
                 return {
                     detail: {
                         url: `/podcast/${detail.collectionId}`,

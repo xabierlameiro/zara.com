@@ -18,7 +18,6 @@ const AudioCard = (props: Episode) => {
                 <div dangerouslySetInnerHTML={{ __html: props.description }} />
             </div>
             <div data-testid="audio-card-sponsored" className={styles.audio_card_sponsored}>
-                {/* TODO: Pending fund this data */}
                 This episode is sponsored by
             </div>
             <audio controls data-testid="audio-card-player" className={styles.audio_card_player}>
