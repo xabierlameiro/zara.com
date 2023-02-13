@@ -1,10 +1,10 @@
 # Requirements
 
-[Link](TODO.md)
+[Link to requirements](TODO.md)
 
 # Install dependencies
 
-yarn install
++ yarn install
 
 # How to use production build
 
@@ -17,17 +17,15 @@ yarn install
 http://localhost:3000/api/podcasts
 
 ## GET Episodes
-http://localhost:3000/api/episodes/1535809341
+http://localhost:3000/api/episodes/{podcastId}
 
 # Run tests
 
-yarn test 
++ yarn test 
 
-yarn test --coverage (to see coverage)
++ yarn test:watch (to run in watch mode)
 
-# Run tests in watch mode
-
-yarn test:watch
++ yarn test --coverage (to see coverage)
 
 # Command sequence to create this project:
 

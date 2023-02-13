@@ -11,14 +11,15 @@
 }
 
 .filter_count {
-    color: #fff;
-    background-color: rgba(83, 124, 180);
+    color: rgba(var(--white-color));
+    background-color: rgba(var(--blue-color));
     padding: 5px;
     border-radius: 10px;
+    font-weight: 800;
 }
 
 .filter_input {
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(var(--border-color));
     border-radius: 5px;
     padding: 10px;
     font-size: 16px;

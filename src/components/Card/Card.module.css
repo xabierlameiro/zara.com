@@ -8,17 +8,13 @@
     padding: 20px;
     max-width: 300px;
     text-decoration: none;
-    color: #000;
     cursor: pointer;
-    background-color: #fff;
     margin-bottom: 20px;
     position: relative;
     margin-top: 100px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.card:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    color: rgba(var(--black-color));
+    background-color: rgba(var(--white-color));
+    box-shadow: var(--box-shadow);
 }
 
 .card:hover .card_img {
@@ -40,5 +36,5 @@
 .card_author {
     font-size: 14px;
     font-weight: 400;
-    color: grey;
+    color: rgba(var(--grey-color));
 }

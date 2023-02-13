@@ -4,8 +4,8 @@
     box-sizing: border-box;
     border-radius: 5px;
     height: fit-content;
-    background-color: #fff;
-    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.1);
+    background-color: rgba(var(--white-color));
+    box-shadow: var(--box-shadow);
 }
 
 .audio_card_title {
@@ -35,19 +35,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(66, 66, 66);
+    background-color: rgba(var(--background-color));
     border-radius: 2px;
 }
 
 audio.audio_card_player::-webkit-media-controls-panel {
-    background-color: rgba(66, 66, 66);
+    background-color: rgba(var(--background-color));
     border: 0;
 }
 
 audio.audio_card_player::-webkit-media-controls-current-time-display,
 audio.audio_card_player::-webkit-media-controls-time-remaining-display {
-    color: white;
-    fill: #fff;
-    border: 0;
-    stroke: #fff;
+    color: rgba(var(--white-color));
 }

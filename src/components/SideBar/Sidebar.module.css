@@ -11,8 +11,8 @@
 .sidebar {
     width: 250px;
     height: fit-content;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    background: rgba(var(--white-color));
+    box-shadow: var(--box-shadow);
     display: grid;
     padding: 20px;
     justify-items: center;
@@ -26,14 +26,14 @@
 }
 
 .sidebar_title {
-    border-top: 1px solid #f1f1f1;
-    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid rgba(var(--border-color));
+    border-bottom: 1px solid rgba(var(--border-color));
     padding: 20px 0;
     margin: 30px 0;
 }
 
 .sidebar_podcast {
-    color: #000;
+    color: rgba(var(--black-color));
     font-weight: 800;
     font-size: 14px;
     display: inline-block;
@@ -43,26 +43,26 @@
     display: inline-block;
     font-weight: 400;
     font-size: 14px;
-    color: #000;
+    color: rgba(var(--black-color));
     font-style: italic;
 }
 
 .sidebar_description {
     font-size: 14px;
-    color: #000;
+    color: rgba(var(--black-color));
 }
 
 .sidebar_description_container_title {
     display: inline-block;
     font-weight: 700;
     font-size: 14px;
-    color: #000;
+    color: rgba(var(--black-color));
     padding-bottom: 10px;
 }
 .sidebar_description_container_text {
     display: inline-block;
     font-weight: 400;
     font-size: 14px;
-    color: #000;
+    color: rgba(var(--black-color));
     font-style: italic;
 }
