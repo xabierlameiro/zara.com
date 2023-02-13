@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import styles from './Header.module.css';
+import type { HeaderProps } from '@/types/podcast';
 
-type HeaderProps = {
-    isLoading?: boolean;
-};
-
+/**
+ * @description - Header component to display "Podcaster" and a loading mark
+ * @param {boolean} isLoading - Flag to indicate if the page is loading
+ */
 const Header = ({ isLoading = false }: HeaderProps) => {
     return (
         <header data-testid="podcast-header">

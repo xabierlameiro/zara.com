@@ -34,3 +34,7 @@ export type Episode = {
     duration: string;
     date: string;
 };
+
+export type HeaderProps = {
+    isLoading?: boolean;
+};
