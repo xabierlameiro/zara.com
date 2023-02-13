@@ -13,7 +13,7 @@ import type { Podcast } from '@/types/podcast';
  */
 const Card = ({ img, url, title, author }: Podcast) => {
     return (
-        <Link href={url} data-testid="card" className={styles.card}>
+        <Link href={url} data-testid="card" className={styles.card} title={`Go to ${title}`}>
             <Image
                 data-testid="card-image"
                 className={styles.card_img}
