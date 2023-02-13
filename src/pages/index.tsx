@@ -14,12 +14,20 @@ const Home = ({ podcasts }: { podcasts: Podcast[] }) => {
 };
 
 export async function getStaticProps() {
-    const res = await (await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/podcasts`)).json();
-
-    return {
-        props: {
-            podcasts: Object.values(res),
-        },
-    };
+    try {
+        const res = await (await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/podcasts`)).json();
+        return {
+            props: {
+                podcasts: Object.values(res),
+            },
+        };
+    } catch (error) {
+        return {
+            props: {
+                podcasts: [],
+            },
+        };
+    }
 }
+
 export default Home;
