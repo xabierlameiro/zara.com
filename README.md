@@ -8,8 +8,8 @@
 
 # How to use production build
 
-1. yarn dev - To turn on the api (necessary for the production build port 3000)
-2. yarn build - To generate the production build
+1. yarn dev - To turn on the api (necessary for the production build port 3000) 1º terminal
+2. yarn build - To generate the production build 2º terminal
 3. yarn start - To run the production build (this will run on port 4000)
 
 # Endpoint routes
