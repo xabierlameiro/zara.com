@@ -10,7 +10,7 @@ const Header = ({ isLoading = false }: HeaderProps) => {
     return (
         <header data-testid="podcast-header">
             <nav className={styles.header_nav}>
-                <Link href="/" className={styles.header_nav_link}>
+                <Link href="/" className={styles.header_nav_link} title="Go to home page">
                     Podcaster
                 </Link>
                 {isLoading && <span data-testid="podcast-header-mark" className={styles.header_nav_mark} />}

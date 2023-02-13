@@ -10,7 +10,7 @@
 
 .header_nav_link {
     text-decoration: none;
-    color: rgba(var(--blue-red));
+    color: rgba(var(--blue-color));
     font-weight: 600;
     font-size: 20px;
 }

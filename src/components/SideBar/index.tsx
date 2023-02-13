@@ -18,7 +18,7 @@ const Sidebar = (props: SideBarProps) => {
     const { url, img, title, author, description } = props;
 
     return (
-        <Link href={url} data-testid="sidebar" className={styles.link}>
+        <Link href={url} data-testid="sidebar" className={styles.link} title={`Go to ${title}`}>
             <aside className={styles.sidebar}>
                 <Image
                     priority
@@ -34,6 +34,7 @@ const Sidebar = (props: SideBarProps) => {
                         {title}
                     </span>
                     <span className={styles.sidebar_author} data-testid="sidebar-author">
+                        {' '}
                         by {author}
                     </span>
                 </span>
