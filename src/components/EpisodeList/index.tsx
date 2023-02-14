@@ -7,10 +7,8 @@ import { useRouter } from 'next/router';
  * @param {Episode[]} episodes - List of episodes
  * @returns {JSX.Element} - Table with the list of episodes
  */
-const EpisodeList = ({ collection }: { collection: Episode[] }): JSX.Element | null => {
+const EpisodeList = ({ collection = [] }: { collection: Episode[] }): JSX.Element | null => {
     const router = useRouter();
-
-    if (!collection) return null;
 
     return (
         <div data-testid="episode-container" className={styles.episode_container}>

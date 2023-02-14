@@ -15,7 +15,7 @@ import styles from './Sidebar.module.css';
 const Sidebar = (props: SideBarProps) => {
     if (!props.img) return null;
 
-    const { url, img, title, author, description } = props;
+    const { url, img, title, author, description } = props || {};
 
     return (
         <Link href={url} data-testid="sidebar" className={styles.link} title={`Go to ${title}`}>
