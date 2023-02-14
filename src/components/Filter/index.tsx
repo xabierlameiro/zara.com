@@ -24,7 +24,7 @@ const Filter = ({ collection, placeHolder = 'Filter podcast...' }: FilterProps) 
 
     React.useEffect(() => {
         if (collection) {
-            const results = collection.filter((item: Podcast) => {
+            const results = collection?.filter((item: Podcast) => {
                 return (
                     item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                     item.author.toLowerCase().includes(searchTerm.toLowerCase())
