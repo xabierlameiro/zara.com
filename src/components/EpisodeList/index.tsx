@@ -1,6 +1,6 @@
 import styles from './EpisodeList.module.css';
 import type { Episode } from '@/types/podcast';
-import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 /**
  * @description - Table to display the list of episodes with title, date and duration. Also a counter of the total number of episodes in the top
@@ -8,6 +8,8 @@ import Link from 'next/link';
  * @returns {JSX.Element} - Table with the list of episodes
  */
 const EpisodeList = ({ collection }: { collection: Episode[] }): JSX.Element => {
+    const router = useRouter();
+
     return (
         <div data-testid="episode-container" className={styles.episode_container}>
             <div data-testid="episode-list-counter" className={styles.episode_list_counter}>
@@ -25,15 +27,14 @@ const EpisodeList = ({ collection }: { collection: Episode[] }): JSX.Element => 
                     <tbody>
                         {collection.length > 0 ? (
                             collection.map((episode: Episode, index: number) => (
-                                <tr key={index} data-testid="episode-list-table-row">
-                                    <td>
-                                        <Link
-                                            href={`/podcast/${episode.podcastId}/episode/${episode.id}`}
-                                            className={styles.episode_list_table_row}
-                                        >
-                                            {episode.name}
-                                        </Link>
-                                    </td>
+                                <tr
+                                    key={index}
+                                    data-testid="episode-list-table-row"
+                                    onClick={() => {
+                                        router.push(`/podcast/${episode.podcastId}/episode/${episode.id}`);
+                                    }}
+                                >
+                                    <td className={styles.episode_list_table_row}>{episode.name}</td>
                                     <td>{new Date(episode.date).toLocaleDateString('en-GB')}</td>
                                     <td className={styles.episode_list_table_row_duration}>
                                         {new Date(episode.duration).toLocaleTimeString('en-GB', {

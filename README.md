@@ -27,6 +27,10 @@ http://localhost:3000/api/episodes/{podcastId}
 
 + yarn test --coverage (to see coverage)
 
+# Run lint
+
++ yarn lint
+
 # Command sequence to create this project:
 
 1. npm init -y

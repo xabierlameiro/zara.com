@@ -28,29 +28,3 @@ const PodCastDetail = () => {
 };
 
 export default PodCastDetail;
-
-// The same thing but with cache for SSR
-
-// export async function getServerSideProps(context: any) {
-//     context.res.setHeader('Cache-Control', 'public, s-maxage=10, stale-while-revalidate=24 hours here');
-//     const { podcastId } = context.params;
-//     const url = new URL(`${process.env.NEXT_PUBLIC_DOMAIN}/api/episodes/${podcastId}`);
-
-//     const res = await (await fetch(url)).json();
-
-//     return {
-//         props: {
-//             fallback: {
-//                 [unstable_serialize(['api', 'episodes', podcastId])]: res,
-//             },
-//         },
-//     };
-// }
-
-// export default function Page({ fallback }: any) {
-//     return (
-//         <SWRConfig value={{ fallback }}>
-//             <PodCastDetail />
-//         </SWRConfig>
-//     );
-// }

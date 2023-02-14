@@ -34,7 +34,6 @@ const Sidebar = (props: SideBarProps) => {
                         {title}
                     </span>
                     <span className={styles.sidebar_author} data-testid="sidebar-author">
-                        {' '}
                         by {author}
                     </span>
                 </span>
