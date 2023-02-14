@@ -26,6 +26,9 @@
 }
 
 .sidebar_title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     border-top: 1px solid rgba(var(--border-color));
     border-bottom: 1px solid rgba(var(--border-color));
     padding: 20px 0;

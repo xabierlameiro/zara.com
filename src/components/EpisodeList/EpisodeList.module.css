@@ -7,16 +7,19 @@
 
 .episode_list_counter {
     width: 100%;
-    box-shadow: var(--box-shadow);
     padding: 20px;
     font-weight: 800;
     font-size: 20px;
     box-sizing: border-box;
     user-select: none;
+    box-shadow: var(--box-shadow);
 }
 
-.episode_list  {
+.episode_list {
     width: 100%;
+    overflow: auto;
+    max-height: calc(100vh - 300px);
+    box-shadow: var(--box-shadow);
 }
 
 .episode_list_table {
@@ -35,15 +38,24 @@
 }
 
 .episode_list_table thead {
+    background-color: rgba(var(--white-color));
     font-weight: 800;
     font-size: 16px;
     text-align: left;
     user-select: none;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .episode_list_table th,
 .episode_list_table td {
-    padding: 15px 20px;
+    padding: 0 20px;
+}
+
+.episode_list_table tr,
+.episode_list_table th {
+    height: 50px;
 }
 
 .episode_list_table tbody tr:nth-child(odd) {
