@@ -29,7 +29,11 @@ export default function App({ Component, pageProps }: AppProps) {
                         setLoading(true);
                     }
                     const res = await fetch(url, ...rest);
-                    setLoading(false);
+
+                    if (!cachedData) {
+                        setLoading(false);
+                    }
+
                     return res.json();
                 },
                 provider: () => localStorageProvider(),
