@@ -3,6 +3,8 @@ import Card from '@/components/Card';
 import styles from './Filter.module.css';
 import type { FilterProps, Podcast } from '@/types/podcast';
 
+const isCSR = typeof window !== 'undefined';
+
 /**
  * @description Receives a collection and returns it filtered by title or author when the user types in the input
  * @param {Array} collection - The collection of podcasts
@@ -10,11 +12,14 @@ import type { FilterProps, Podcast } from '@/types/podcast';
  * @returns {Array} - The filtered collection of podcasts
  */
 const Filter = ({ collection, placeHolder = 'Filter podcast...' }: FilterProps) => {
-    const [filteredCollection, setFilteredCollection] = React.useState(collection);
-    const [searchTerm, setSearchTerm] = React.useState('');
+    const [searchTerm, setSearchTerm] = React.useState<string>(isCSR ? localStorage.getItem('searchTerm') || '' : '');
+    const [filteredCollection, setFilteredCollection] = React.useState<Podcast[]>([]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(event.target.value);
+        if (isCSR) {
+            localStorage.setItem('searchTerm', event.target.value);
+        }
     };
 
     React.useEffect(() => {

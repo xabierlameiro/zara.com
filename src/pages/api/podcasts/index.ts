@@ -23,10 +23,12 @@ export default async function handler(
             },
             title: podcast['im:name'].label,
             author: podcast['im:artist'].label,
+            description: podcast.summary.label,
+            id: podcast.id.attributes['im:id'],
         }));
 
         res.status(200).json({
-            ...podcasts,
+            podcasts,
         });
     } catch (err) {
         res.status(500).json({ error: err });

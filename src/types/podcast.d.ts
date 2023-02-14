@@ -33,6 +33,7 @@ export type Episode = {
     description: string;
     duration: string;
     date: string;
+    sponsor?: string;
 };
 
 export type HeaderProps = {

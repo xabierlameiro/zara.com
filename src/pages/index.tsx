@@ -15,10 +15,10 @@ const Home = ({ podcasts }: { podcasts: Podcast[] }) => {
 
 export async function getStaticProps() {
     try {
-        const res = await (await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/podcasts`)).json();
+        const { podcasts } = await (await fetch(`${process.env.NEXT_PUBLIC_DOMAIN}/api/podcasts`)).json();
         return {
             props: {
-                podcasts: Object.values(res),
+                podcasts: podcasts,
             },
             // Re-generate the home page 24 hours after the last request
             revalidate: 60 * 60 * 24,
